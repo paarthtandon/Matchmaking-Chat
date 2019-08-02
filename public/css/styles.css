@@ -1,0 +1,164 @@
+body {
+    background-color: #9E0A0A;
+    color: white;
+}
+
+h2 {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    word-break: break-word;
+}
+
+select {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+}
+
+.tag {
+    color: black;
+    margin: 5px;
+}
+
+.tagbtn {
+    background-color: lightcoral;
+    border: none;
+    padding: 5px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    color: white;
+    font-size: 12px;
+}
+
+.big-button {
+    background-color: #099C51;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+}
+
+.your-chat {
+    color: black;
+    padding: 10px 10px;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: right;
+    background-color: lightblue;
+    margin-left: 50px;
+    word-break: break-word;
+}
+
+.partner-chat {
+    color: black;
+    padding: 10px 10px;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: left;
+    background-color: wheat;
+    margin-right: 50px;
+    word-break: break-word;
+}
+
+.server-chat {
+    color: black;
+    padding: 10px 10px;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    background-color: lightcoral;
+    word-break: break-word;
+}
+
+#settings {
+    background-color: transparent;
+    grid-area: s;
+}
+
+#chat-window {
+    background-color: white;
+    grid-area: c;
+    justify-self: stretch;
+    align-self: stretch;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+}
+
+#output {
+    height: 500px;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#chat-io {
+    grid-area: b;
+    justify-self: stretch;
+    align-self: end;
+}
+
+#leave {
+    justify-self: end;
+}
+
+#grid {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: .25fr 1fr 1fr 1fr .75fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        ". . . . . . . . . ."
+        ". s s . . c c c c ."
+        ". s s . . c c c c ."
+        ". s s . . c c c c ."
+        ". s s . . b b b b ."
+        ". . . . . . . . . .";
+}
+
+#start {
+    width: 100%;
+}
+
+#tag-container {
+    float: left;
+    width: 100%;
+}
+
+#tag-container ul {
+    margin: 0;
+    padding: 0;
+}
+
+#tag-container ul li {
+    list-style-type: none;
+    display: inline;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
