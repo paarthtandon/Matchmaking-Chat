@@ -2,10 +2,13 @@ var express = require('express');
 var socket = require('socket.io');
 var fetch = require("node-fetch");
 
+var port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+var ip = process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
+
 //App setup
 var app = express();
-var server = app.listen(process.env.OPENSHIFT_NODEJS_PORT || 4000, process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0', function () {
-    console.log('listening to request on port 4000');
+var server = app.listen(port, ip, function () {
+    console.log('running at ' + ip + ":" + port);
 })
 
 // Static files
