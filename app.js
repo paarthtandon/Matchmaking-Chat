@@ -4,7 +4,7 @@ var fetch = require("node-fetch");
 
 //App setup
 var app = express();
-var server = app.listen(process.env.PORT || 4000, function () {
+var server = app.listen(process.env.OPENSHIFT_NODEJS_PORT || 4000, process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1', function () {
     console.log('listening to request on port 4000');
 })
 
