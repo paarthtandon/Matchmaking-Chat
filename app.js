@@ -29,6 +29,11 @@ var matchTags = function (set1, set2) {
         return false;
     }
 }
+
+var matchGenderPreference = function (gen1, pre1, gen2, pre2) {
+    return (pre1 == 'any' && pre2 == 'any') || (pre1 == 'any' && (pre2 == gen1)) || 
+    (pre2 == 'any' && (pre1 == gen2)) || ((pre1 == gen2) && (pre2 == gen1));
+}
         
 var findPartnerForLoneSocket = function (user) {
     console.log('user', user.tags, user.blocked);
@@ -41,40 +46,10 @@ var findPartnerForLoneSocket = function (user) {
 
             if (p) {
                 if (!(user.blocked.includes(p.socket.id) || p.blocked.includes(user.socket.id))) {
-                    //user: any, partner: any
-                    if (p.preference == 'any' && user.preference == 'any') {
-                        if (matchTags(user.tags, p.tags)){
-                            var partner = queue[i];
-                            delete queue[i];
-                            break;
-                        }
-                    //partner: any
-                    } else if (p.preference == 'any') {
-                        if (user.preference == p.gender) {
-                            if (matchTags(user.tags, p.tags)){
-                                var partner = queue[i];
-                                delete queue[i];
-                                break;
-                            }
-                        }
-                    //user: any
-                    } else if (user.preference == 'any') {
-                        if (p.preference == user.gender) {
-                            if (matchTags(user.tags, p.tags)){
-                                var partner = queue[i];
-                                delete queue[i];
-                                break;
-                            }
-                        }
-                    //No any
-                    } else {
-                        if (user.preference == p.gender && p.preference == user.gender) {
-                            if (matchTags(user.tags, p.tags)){
-                                var partner = queue[i];
-                                delete queue[i];
-                                break;
-                            }
-                        }
+                    if (matchGenderPreference(user.gender, user.preference, p.gender, p.preference) && matchTags(user.tags, p.tags)) {
+                        var partner = queue[i];
+                        delete queue[i];
+                        break;
                     }
                 }
             }
