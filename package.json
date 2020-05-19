@@ -1,7 +1,7 @@
 {
-  "name": "chat",
+  "name": "matchmaking-chat",
   "version": "1.0.0",
-  "description": "",
+  "description": "A site to meet people with similar interests.",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"

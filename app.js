@@ -2,12 +2,12 @@ var express = require('express');
 var socket = require('socket.io');
 var fetch = require("node-fetch");
 
-var port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
-var ip = process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
+var port = process.env.PORT || 8080;
+var ip = '0.0.0.0';
 
 //App setup
 var app = express();
-var server = app.listen(port, ip, function () {
+var server = app.listen(port, function () {
     console.log('running at ' + ip + ":" + port);
 })
 
