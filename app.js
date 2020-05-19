@@ -34,10 +34,10 @@ var matchTags = function (set1, set2) {
 }
 
 var matchGenderPreference = function (gen1, pre1, gen2, pre2) {
-    return (pre1 == 'any' && pre2 == 'any') || (pre1 == 'any' && (pre2 == gen1)) || 
-    (pre2 == 'any' && (pre1 == gen2)) || ((pre1 == gen2) && (pre2 == gen1));
+    return (pre1 == 'any' && pre2 == 'any') || (pre1 == 'any' && (pre2 == gen1)) ||
+        (pre2 == 'any' && (pre1 == gen2)) || ((pre1 == gen2) && (pre2 == gen1));
 }
-        
+
 var findPartnerForLoneSocket = function (user) {
     console.log('user', user.tags, user.blocked);
 

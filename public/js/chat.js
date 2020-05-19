@@ -56,7 +56,7 @@ message.addEventListener('keydown', function () {
     socket.emit('typing', {});
 });
 
-//Listeners
+//Socket Listeners
 socket.on('connect', function (data) {
     connected = true;
     hideChat();

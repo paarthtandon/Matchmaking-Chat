@@ -1,55 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <title>Home</title>
-    <script src="/socket.io/socket.io.js"></script>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/auto-complete.css">
-</head>
+    <head>
+        <meta charset="utf-8">
+        <title>Home</title>
+        <script src="/socket.io/socket.io.js"></script>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/auto-complete.css">
+    </head>
 
-<body>
-    <div id="grid">
+    <body>
+        <div id="grid">
 
-        <div id="settings">
-            <h1 id="welcome">Matchmaking Chat</h1>
-            <h2>I am a...</h2>
-            <select id="gender">
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-            </select>
-            <h2>Looking for a...</h2>
-            <select id="preference">
-                <option value="any">Any</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-            </select>
-            <h2>Who likes...</h2>
-            <div id="tag-container">
-                <ul id="tag-buttons"></ul>
-            </div>
-            <input id="tag-input" type="text" name="q" placeholder="Click to add interests..."
+            <div id="settings">
+                <h1 id="welcome">Matchmaking Chat</h1>
+                <h2>I am a...</h2>
+                <select id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <h2>Looking for a...</h2>
+                <select id="preference">
+                    <option value="any">Any</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <h2>Who likes...</h2>
+                <div id="tag-container">
+                    <ul id="tag-buttons"></ul>
+                </div>
+                <input id="tag-input" type="text" name="q" placeholder="Click to add interests..."
                 style="width:100%;max-width:600px;outline:0">
-            <button id="start" class="big-button">Start</button>
+                <button id="start" class="big-button">Start</button>
+            </div>
+
+            <div id="chat-window">
+                <ul id="output"></ul>
+            </div>
+
+            <div id="chat-io">
+                <input type="text" placeholder="Message" id="message">
+                <button id="send" class="big-button">Send</button>
+                <button id="leave" class="big-button">Leave</button>
+                <button id="block" class="big-button">Block</button>
+            </div>
+
         </div>
 
-        <div id="chat-window">
-            <ul id="output"></ul>
-        </div>
-
-        <div id="chat-io">
-            <input type="text" placeholder="Message" id="message">
-            <button id="send" class="big-button">Send</button>
-            <button id="leave" class="big-button">Leave</button>
-            <button id="block" class="big-button">Block</button>
-        </div>
-
-    </div>
-
-    <script src="/js/auto-complete.min.js"></script>
-    <script src="/js/chat.js"></script>
-</body>
+        <script src="/js/auto-complete.min.js"></script>
+        <script src="/js/chat.js"></script>
+    </body>
 
 </html>

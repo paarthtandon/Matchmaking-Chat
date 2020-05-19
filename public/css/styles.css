@@ -131,12 +131,12 @@ input[type=text] {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: .25fr 1fr 1fr 1fr .75fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
-        ". . . . . . . . . ."
-        ". s s . . c c c c ."
-        ". s s . . c c c c ."
-        ". s s . . c c c c ."
-        ". s s . . b b b b ."
-        ". . . . . . . . . .";
+    ". . . . . . . . . ."
+    ". s s . . c c c c ."
+    ". s s . . c c c c ."
+    ". s s . . c c c c ."
+    ". s s . . b b b b ."
+    ". . . . . . . . . .";
 }
 
 #start {
